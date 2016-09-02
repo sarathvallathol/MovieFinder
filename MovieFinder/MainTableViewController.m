@@ -82,13 +82,27 @@ UIActivityIndicatorView *spinner;
         cell = [[MainTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     if (result !=nil) {
+        
         NSString *title = [result objectForKey:@"Title"];
         NSLog(@"%@",title);
         [self retrivingDataFromApiResponse];
         cell.titleLable.text = title;
         cell.posterImage.contentMode = UIViewContentModeScaleAspectFit;
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[result objectForKey:@"Poster"]]]];
-        [cell.posterImage setImage:image];
+
+        dispatch_queue_t concurrentQueue =  dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        
+        //this will start the image loading in bg
+        
+        dispatch_async(concurrentQueue, ^{
+            NSData *image = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[result objectForKey:@"Poster"]]];
+            
+            //this will set the image when loading is finished
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIImage *imageView = [UIImage imageWithData:image];
+                [cell.posterImage setImage:imageView];
+            });
+        });
     }
     
     //cell.posterImage.image = [UIImage imageNamed:@"image001.png"];
@@ -156,17 +170,18 @@ UIActivityIndicatorView *spinner;
             if ([[result objectForKey:@"Response"] isEqualToString:@"True"]) {
                 
                 [self retrivingDataFromApiResponse];
-                [self getProductData:searchBar.text];
+                [self.searchDisplayController.searchResultsTableView reloadData];
+                
                 
                 
             }else{
                 UIAlertView *failureAlert = [[UIAlertView alloc] initWithTitle:@"Error Retrieving details"
-                                                                    message:@"Film name not found"
-                                                                   delegate:nil
-                                                          cancelButtonTitle:@"Ok"
-                                                          otherButtonTitles:nil];
+                                                                       message:@"Film name not found"
+                                                                      delegate:nil
+                                                             cancelButtonTitle:@"Ok"
+                                                             otherButtonTitles:nil];
                 [failureAlert show];
-
+                
             }
             
             
@@ -233,13 +248,13 @@ UIActivityIndicatorView *spinner;
         }
     }
 }
--(void)getProductData:(NSString *)title{
-    
-    [self performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
-}
--(void)reloadData{
-    [self.tableView reloadData];
-}
+//-(void)getProductData:(NSString *)title{
+//    
+//    [self performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+//}
+//-(void)reloadData{
+//    [self.searchDisplayController.searchResultsTableView reloadData];
+//}
 -(void)startSpinner{
     
    spinner = [[UIActivityIndicatorView alloc]
