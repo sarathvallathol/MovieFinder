@@ -16,7 +16,6 @@
 		FD5697491D79C59600B90962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5697481D79C59600B90962 /* Main.storyboard */; };
 		FD86D5E31D78859900C2C6E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD86D5E21D78859900C2C6E4 /* main.m */; };
 		FD86D5E61D78859900C2C6E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD86D5E51D78859900C2C6E4 /* AppDelegate.m */; };
-		FD86D5E91D78859900C2C6E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD86D5E81D78859900C2C6E4 /* ViewController.m */; };
 		FD86D5EF1D78859900C2C6E4 /* MovieFinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD86D5ED1D78859900C2C6E4 /* MovieFinder.xcdatamodeld */; };
 		FD86D5F11D78859900C2C6E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD86D5F01D78859900C2C6E4 /* Assets.xcassets */; };
 		FD86D5F41D78859900C2C6E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD86D5F21D78859900C2C6E4 /* LaunchScreen.storyboard */; };
@@ -41,8 +40,6 @@
 		FD86D5E21D78859900C2C6E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD86D5E41D78859900C2C6E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FD86D5E51D78859900C2C6E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FD86D5E71D78859900C2C6E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FD86D5E81D78859900C2C6E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FD86D5EE1D78859900C2C6E4 /* MovieFinder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieFinder.xcdatamodel; sourceTree = "<group>"; };
 		FD86D5F01D78859900C2C6E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD86D5F31D78859900C2C6E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,8 +100,6 @@
 		FD86D5E01D78859900C2C6E4 /* MovieFinder */ = {
 			isa = PBXGroup;
 			children = (
-				FD86D5E71D78859900C2C6E4 /* ViewController.h */,
-				FD86D5E81D78859900C2C6E4 /* ViewController.m */,
 				FD86D5F01D78859900C2C6E4 /* Assets.xcassets */,
 				FD86D5F21D78859900C2C6E4 /* LaunchScreen.storyboard */,
 				FD86D5F51D78859900C2C6E4 /* Info.plist */,
@@ -257,7 +252,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD86D5EF1D78859900C2C6E4 /* MovieFinder.xcdatamodeld in Sources */,
-				FD86D5E91D78859900C2C6E4 /* ViewController.m in Sources */,
 				FD56973C1D7966A700B90962 /* DataObject.m in Sources */,
 				FD5697441D7998F800B90962 /* DetailViewController.m in Sources */,
 				FD5697471D79992900B90962 /* RecentTableViewController.m in Sources */,

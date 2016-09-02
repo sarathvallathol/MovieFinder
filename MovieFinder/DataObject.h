@@ -15,5 +15,10 @@
 @property (nonatomic,retain)NSString *relesed;
 @property (nonatomic,retain)NSString *director;
 @property (nonatomic,retain)NSString *poster;
+@property (nonatomic,retain)NSString *plot;
+@property (nonatomic,retain)NSString *rating;
+@property (nonatomic,retain)NSString *language;
+
+
 @end
 

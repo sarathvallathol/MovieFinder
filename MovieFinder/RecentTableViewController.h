@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RecentTableViewController : UITableViewController
+@property (strong) NSMutableArray *searchText;
 
 @end

@@ -13,6 +13,7 @@
 @property(nonatomic,weak) IBOutlet UIImageView *posterImage;
 @property (nonatomic,weak) IBOutlet UILabel *rating;
 @property (nonatomic,weak) IBOutlet UILabel *plot;
+@property (nonatomic,weak) IBOutlet UILabel *language;
 @property (nonatomic,weak) IBOutlet UILabel *releaseDate;
 @property (nonatomic,weak) IBOutlet UILabel *MovieTile;
 @property (nonatomic,weak) IBOutlet UILabel *directer;

@@ -14,36 +14,9 @@
 @synthesize director;
 @synthesize title;
 @synthesize relesed;
+@synthesize language;
+@synthesize plot;
+@synthesize rating;
 
--(void)recieveValues:(NSDictionary *)values{
-    
-                poster = [values objectForKey:@"Poster"];
-                year = [values objectForKey:@"Year"];
-                director =  [values objectForKey:@"Director"];
-                relesed = [values objectForKey:@"Released"];
-                title = [values objectForKey:@"Title"];
-
-    
-}
 @end
-//@implementation MovieDetail
 
-
-
-
-
-//-(id)copyWithZone:(NSZone *)zone {
-//    
-////    MovieDetail *item = [MovieDetail allocWithZone:zone];
-////    
-////    item.poster = poster;
-////    item.year = year;
-////    item.director = director;
-////    item.title = title;
-////    item.relesed = relesed;
-////    
-////    return item;
-//    
-//}
-
-//@end
