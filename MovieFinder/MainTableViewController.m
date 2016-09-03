@@ -152,7 +152,7 @@ UIActivityIndicatorView *spinner;
          // Do the search...
         NSString *string = [NSString stringWithFormat:@"http://www.omdbapi.com/?t=%@+&y=&plot=short&r=json", trimmedText];
         NSURL *url = [NSURL URLWithString:string];
-        NSLog(@"url =%@",string);
+        //NSLog(@"url =%@",string);
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         
         
@@ -175,13 +175,8 @@ UIActivityIndicatorView *spinner;
                 
                 
             }else{
-                UIAlertView *failureAlert = [[UIAlertView alloc] initWithTitle:@"Error Retrieving details"
-                                                                       message:@"Film name not found"
-                                                                      delegate:nil
-                                                             cancelButtonTitle:@"Ok"
-                                                             otherButtonTitles:nil];
-                [failureAlert show];
                 
+                [self alertView:@"Movie name not found"];
             }
             
             
@@ -190,12 +185,8 @@ UIActivityIndicatorView *spinner;
             [spinner removeFromSuperview];
             [spinner stopAnimating];
             
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving details"
-                                                                message:[error localizedDescription]
-                                                               delegate:nil
-                                                      cancelButtonTitle:@"Ok"
-                                                      otherButtonTitles:nil];
-            [alertView show];
+            [self alertView:[error localizedDescription]];
+         
         }];
         
         
@@ -268,5 +259,15 @@ UIActivityIndicatorView *spinner;
                                                                    options:NSRegularExpressionSearch
                                                                      range:NSMakeRange(0, [string length])];
     return trimmedText;
+}
+-(void)alertView:(NSString *)message{
+    
+    UIAlertView *failureAlert = [[UIAlertView alloc] initWithTitle:@"Error Retrieving details"
+                                                           message:message
+                                                          delegate:nil
+                                                 cancelButtonTitle:@"Ok"
+                                                 otherButtonTitles:nil];
+    [failureAlert show];
+
 }
 @end
