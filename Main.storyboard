@@ -7,30 +7,14 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="xnp-9q-AlD">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jz6-JH-4bY" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="frE-Ky-VVi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hbd-LJ-4AT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="340" y="1063"/>
-        </scene>
         <!--Movie Finder!-->
         <scene sceneID="Pu1-qc-cIG">
             <objects>
                 <tableViewController id="eFF-e3-xiX" customClass="MainTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="155" sectionHeaderHeight="18" sectionFooterHeight="18" id="vpB-L5-lsf">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="155" sectionHeaderHeight="28" sectionFooterHeight="28" id="vpB-L5-lsf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="5t6-FB-gMA">
                             <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -41,7 +25,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomTableCell" rowHeight="155" id="gLr-N4-C1o" customClass="MainTableViewCell">
-                                <rect key="frame" x="0.0" y="157.5" width="375" height="155"/>
+                                <rect key="frame" x="0.0" y="136" width="375" height="155"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="center" tableViewCell="gLr-N4-C1o" id="vVq-RM-T7M">
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="154.5"/>
@@ -443,26 +427,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vx2-RG-LzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3128.5" y="-166.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="mgQ-cS-vKf">
-            <objects>
-                <viewController id="YQo-UU-CjW" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ICJ-X1-tYs"/>
-                        <viewControllerLayoutGuide type="bottom" id="kPU-cW-bY4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="c4N-rf-NtS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="bns-04-RVY"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k9l-2S-dow" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4650.5" y="-8.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tWU-e1-GXD">

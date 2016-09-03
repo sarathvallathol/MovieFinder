@@ -9,5 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface MainTableViewController : UITableViewController
-@property(nonatomic) IBOutlet UIActivityIndicatorView *acitvityIndicator;
 @end

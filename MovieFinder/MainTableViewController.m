@@ -24,7 +24,6 @@ NSArray *items;
 NSMutableArray *textArray;
 UIActivityIndicatorView *spinner;
 
-@synthesize acitvityIndicator;
 
 
 - (void)viewDidLoad {
@@ -84,11 +83,11 @@ UIActivityIndicatorView *spinner;
     if (result !=nil) {
         
         NSString *title = [result objectForKey:@"Title"];
-        NSLog(@"%@",title);
+        //NSLog(@"%@",title);
         [self retrivingDataFromApiResponse];
         cell.titleLable.text = title;
         cell.posterImage.contentMode = UIViewContentModeScaleAspectFit;
-
+        
         dispatch_queue_t concurrentQueue =  dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
         //this will start the image loading in bg
@@ -105,7 +104,6 @@ UIActivityIndicatorView *spinner;
         });
     }
     
-    //cell.posterImage.image = [UIImage imageNamed:@"image001.png"];
     
     return cell;
 }
@@ -132,13 +130,18 @@ UIActivityIndicatorView *spinner;
 {
     [searchBar resignFirstResponder];
     
+  
+    
     if (searchBar.text.length >0) {
         
+        
+        //spinner
+        [self startSpinner];
+        [self.view addSubview:spinner];
+        [spinner startAnimating];
+        
         //saving search key
-        
-        // Do the search...
         NSManagedObjectContext *context = [self managedObjectContext];
-        
         // Create a new managed object
         NSManagedObject *searchObject = [NSEntityDescription insertNewObjectForEntityForName:@"RecentSearch" inManagedObjectContext:context];
         [searchObject setValue:searchBar.text forKey:@"name"];
@@ -146,16 +149,13 @@ UIActivityIndicatorView *spinner;
         
         NSString *trimmedText = [self removeWhiteSpace:searchBar.text];
         
-        //Api call
+         // Do the search...
         NSString *string = [NSString stringWithFormat:@"http://www.omdbapi.com/?t=%@+&y=&plot=short&r=json", trimmedText];
         NSURL *url = [NSURL URLWithString:string];
         NSLog(@"url =%@",string);
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         
-        //spinner
-        [self startSpinner];
-        [self.view addSubview:spinner];
-        [spinner startAnimating];
+        
         
         AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
         operation.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -248,13 +248,7 @@ UIActivityIndicatorView *spinner;
         }
     }
 }
-//-(void)getProductData:(NSString *)title{
-//    
-//    [self performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
-//}
-//-(void)reloadData{
-//    [self.searchDisplayController.searchResultsTableView reloadData];
-//}
+
 -(void)startSpinner{
     
    spinner = [[UIActivityIndicatorView alloc]

@@ -40,8 +40,7 @@
         rating.text =_object.rating;
         
         [self imageLoading];
-//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_object.poster]]];
-//        [posterImage setImage:image];
+
     }else{
         
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"oops!"

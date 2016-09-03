@@ -10,7 +10,6 @@
 		DD7D986DBBEB6ED306C8CF73 /* libPods-MovieFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC778603ADBD04E853FE248 /* libPods-MovieFinder.a */; };
 		FD56973C1D7966A700B90962 /* DataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD56973B1D7966A700B90962 /* DataObject.m */; };
 		FD56973F1D79825F00B90962 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD56973E1D79825F00B90962 /* MainTableViewCell.m */; };
-		FD5697411D7988D100B90962 /* image001.png in Resources */ = {isa = PBXBuildFile; fileRef = FD5697401D7988D100B90962 /* image001.png */; };
 		FD5697441D7998F800B90962 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5697431D7998F800B90962 /* DetailViewController.m */; };
 		FD5697471D79992900B90962 /* RecentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5697461D79992900B90962 /* RecentTableViewController.m */; };
 		FD5697491D79C59600B90962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5697481D79C59600B90962 /* Main.storyboard */; };
@@ -30,12 +29,11 @@
 		FD56973B1D7966A700B90962 /* DataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataObject.m; sourceTree = "<group>"; };
 		FD56973D1D79825F00B90962 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		FD56973E1D79825F00B90962 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
-		FD5697401D7988D100B90962 /* image001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image001.png; sourceTree = "<group>"; };
 		FD5697421D7998F800B90962 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FD5697431D7998F800B90962 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FD5697451D79992900B90962 /* RecentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentTableViewController.h; sourceTree = "<group>"; };
 		FD5697461D79992900B90962 /* RecentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentTableViewController.m; sourceTree = "<group>"; };
-		FD5697481D79C59600B90962 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FD5697481D79C59600B90962 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		FD86D5DE1D78859900C2C6E4 /* MovieFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD86D5E21D78859900C2C6E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD86D5E41D78859900C2C6E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,8 +78,6 @@
 		FD86D5D51D78859900C2C6E4 = {
 			isa = PBXGroup;
 			children = (
-				FD5697481D79C59600B90962 /* Main.storyboard */,
-				FD5697401D7988D100B90962 /* image001.png */,
 				FD86D5E01D78859900C2C6E4 /* MovieFinder */,
 				FD86D5DF1D78859900C2C6E4 /* Products */,
 				34332F0ABAE974481189DEBD /* Pods */,
@@ -100,6 +96,7 @@
 		FD86D5E01D78859900C2C6E4 /* MovieFinder */ = {
 			isa = PBXGroup;
 			children = (
+				FD5697481D79C59600B90962 /* Main.storyboard */,
 				FD86D5F01D78859900C2C6E4 /* Assets.xcassets */,
 				FD86D5F21D78859900C2C6E4 /* LaunchScreen.storyboard */,
 				FD86D5F51D78859900C2C6E4 /* Info.plist */,
@@ -190,7 +187,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD86D5F41D78859900C2C6E4 /* LaunchScreen.storyboard in Resources */,
-				FD5697411D7988D100B90962 /* image001.png in Resources */,
 				FD86D5F11D78859900C2C6E4 /* Assets.xcassets in Resources */,
 				FD5697491D79C59600B90962 /* Main.storyboard in Resources */,
 			);
